@@ -1,0 +1,70 @@
+body {
+background-color: transparent !important;
+background-image : none !important;
+}
+
+.image-module-position, .bg-no-repeat, #toTop, .social-links, #js_navigation, .top_menu, .website-header, .slogan-position, .module_image, .website-footer, .js-copyright, #translate {
+display : none !important;
+}
+
+.bg-corner-left, .bg-corner-right, .image-module, .breadcrumb, .left_column, .left_column.visible-desktop, .left_column.hidden-desktop, .right-module-position, .right-module-position.visible-desktop,
+.right-module-position.hidden-desktop, .users_top, .users_bottom, .users_footer, .users_image, #search, .top-module-position, .bottom-module-position, .pager, .pagenav, .actions {
+display : none !important;
+}
+
+.website-content {
+background-color : white !important;
+}
+
+.barre-fixed + * {
+margin:0;
+}
+
+/**		 	style for print 		**/
+
+
+html, body {
+background: white;
+background-image : none;
+font-size: 12pt;
+}
+
+.wrapper-website {
+width:auto !important;
+box-shadow:none;
+}
+
+h1 {
+color : #000 !important;
+}
+
+.website-content {
+width: auto !important;
+margin: 0 5%;
+padding: 0;
+border: 0;
+float: none !important;
+color: black;
+background: transparent none;
+-moz-box-shadow:none !important;
+-webkit-box-shadow:none !important;
+box-shadow:none !important;
+}
+
+.main_component {
+border:none;
+background: transparent none;
+padding-top: 1em;
+}
+
+a:link, a:visited {
+color: #520;
+background-color: transparent;
+font-weight: bold;
+text-decoration: underline;
+}
+
+.site a[href]:after {
+content: " (" attr(href) ") ";
+font-size:85%;
+}

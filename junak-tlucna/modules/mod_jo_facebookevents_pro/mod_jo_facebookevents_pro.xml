@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>MOD_JO_FACEBOOKEVENTS_PRO</name>
+	<author>http://www.joomcore.com/</author>
+	<creationDate>16th July, 2014</creationDate>
+	<copyright>http://www.joomcore.com. All rights reserved.</copyright>
+	<authorEmail>contact@joomcore.com</authorEmail>
+	<authorUrl>http://www.joomcore.com/</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>3.1</version>
+	<description>MOD_JO_FACEBOOKEVENTS_PRO_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_jo_facebookevents_pro">mod_jo_facebookevents_pro.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>elements</folder>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_JOOMCOREEXTENSION" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_jo_facebookevents_pro/elements">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="loadjquery" type="radio" class="btn-group" default="1" label="MOD_JO_FACEBOOKEVENTS_PRO_LOADJQUERY" description="MOD_JO_FACEBOOKEVENTS_PRO_LOADJQUERY_DESC" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>	
+				<field name="loadscript" type="radio" class="btn-group" default="1" label="MOD_JO_FACEBOOKEVENTS_PRO_LOADSCRIPT" description="MOD_JO_FACEBOOKEVENTS_PRO_LOADSCRIPT_DESC" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>				
+				<field name="spacer4" type="spacer" class="text" label="MODULE_CREATE_APP_FACEBOOK"/>
+				<field name="app_id" type="text" default="" label="MOD_JO_FACEBOOKEVENTS_PRO_APP_ID" description="MOD_JO_FACEBOOKEVENTS_PRO_APP_ID_DESC" />
+				<field name="secret" type="text" default="" label="MOD_JO_FACEBOOKEVENTS_PRO_SECRET" description="MOD_JO_FACEBOOKEVENTS_PRO_SECRET_DESC" />
+				
+				<field name="@spacer2" type="spacer" class="text" label="______________CONFIG MODULE__________" />
+				<field name="user_id" type="loginfb" default="" label="MOD_JO_FACEBOOKEVENTS_PRO_CONNECTFACEBOOK" description="MOD_JO_FACEBOOKEVENTS_PRO_CONNECTFACEBOOK_DESC" />
+				
+				<field name="access_token" type="accesstoken" description="MOD_JO_FACEBOOKEVENTS_PRO_ACCESSTOKEN_DESCRIPTION" label="MOD_JO_FACEBOOKEVENTS_PRO_YOUR_FB_ACCESS_TOKEN"	/>
+				
+				<field name="account_id" type="accountpage" description="MOD_JO_FACEBOOKEVENTS_PRO_ACCOUNT_PAGE" label="MOD_JO_FACEBOOKEVENTS_PRO_ACCOUNT_PAGE_DESC" />
+												
+				<field name="width" type="text" size="10" default="99%" label="MOD_JO_FACEBOOKEVENTS_PRO_WIDTH" description="MOD_JO_FACEBOOKEVENTS_PRO_WIDTH_DESC" />
+				
+				<field name="upcomingevents" type="radio" class="btn-group" default="0" label="MOD_JO_FACEBOOKEVENTS_PRO_UPCOMINGEVENTS" description="MOD_JO_FACEBOOKEVENTS_PRO_UPCOMINGEVENTS_DESC" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="max" type="text" size="10" default="" label="MOD_JO_FACEBOOKEVENTS_PRO_MAX" description="MOD_JO_FACEBOOKEVENTS_PRO_MAX_DESC" />
+											
+				<field name="dateformat" type="text" default="d M Y - H:i" label="MOD_JO_FACEBOOKEVENTS_PRO_DATEFORMAT" description="MOD_JO_FACEBOOKEVENTS_PRO_DATEFORMAT_DESC" />
+				
+				<field name="popupevent" type="radio" class="btn-group" default="0" label="MOD_JO_FACEBOOKEVENTS_PRO_POPUP_OPEN_EVENT" description="MOD_JO_FACEBOOKEVENTS_PRO_POPUP_OPEN_EVENT_DESC" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+												
+			</fieldset>
+		</fields>
+	</config>
+</extension>	

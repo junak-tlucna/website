@@ -1,0 +1,37 @@
+/*****************************************
+		CUSTOM CSS
+******************************************/
+
+.border {
+  border: 2px solid #fff;
+}
+
+.cols-2 .column-1 {
+  width: 48%;
+}
+
+.cols-2 .column-2 {
+    width: 48%;
+}
+
+/**     AUDANT    **/
+.ruce_linka {
+        color: #000000;
+        background: url(../images/skaut_body.jpg) -180px 0 repeat-y;
+        padding-right: 30px !important;
+        padding-left: 10px !important;
+}
+
+.goldGalleryMainDivClass img {
+	margin-bottom: 2px !important;
+}
+
+.goldGalleryImgContainer span {
+	font-family: .goldGalleryImgContainer span !important;
+	font-size: 12px !important;
+}
+
+.goldGalleryMainDivClass span.photoCount {
+		margin-top: 18px !important;
+		margin-left: 6px !important;
+}

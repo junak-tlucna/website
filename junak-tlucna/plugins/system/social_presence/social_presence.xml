@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>Social Presence</name>
+	<author>JoomSpirit</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright JoomSpirit. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>contact@joomspirit.com</authorEmail>
+	<authorUrl>www.joomspirit.com</authorUrl>
+	<version>1.2</version>
+	<description><![CDATA[ 
+	<link rel="stylesheet" href="../plugins/system/social_presence/admin.css" type="text/css" />
+	This free plugin allows you to display a link to your different social media networking sites. Use this plugin to help increase the number of followers you have on all of the top social networking sites.  Warning : you must always enter the complete url with http:// 
+	]]></description>
+
+	<files>
+		<filename plugin="social_presence">social_presence.xml</filename>
+		<filename plugin="social_presence">social_presence.php</filename>
+		<filename plugin="social_presence">admin.css</filename>
+		<filename plugin="social_presence">social_presence.css</filename>
+		<filename>logo.png</filename>
+        <folder>icons</folder>
+	</files>
+	
+	<config>
+	
+		<fields name="params">
+		
+			<fieldset name="General" label="General options" >
+
+				<field name="alignment" type="radio" default="vertically" label="Alignment" description="Display the social icons vertically or horizontally">
+					<option value="vertically">Vertically</option>
+					<option value="horizontally">Horizontally</option>
+				</field>
+				
+				<field name="position" type="list" default="bottom_right" label="Position icons" description="Choose the place to display your icons">
+					<option value="top_left">Top left corner</option>
+					<option value="top_right">Top right corner</option>
+					<option value="bottom_right">Bottom right corner</option>
+					<option value="bottom_left">Bottom left corner</option>
+				</field>
+				
+				<field name="size" type="list" default="medium" label="Choose icon size" description="Choose the size of your icons">
+					<option value="very_small">Very small</option>
+					<option value="small">Small</option>
+					<option value="medium">Medium</option>
+					<option value="large">Large</option>
+					<option value="very_large">Very large</option>
+				</field>
+								
+				
+				<field name="target" type="list" default="_blank" label="Target" description="Choose to open the link in a new browser window or the same window">
+					<option value="_blank">New window</option>
+					<option value="_self">Same window</option>
+				</field>
+				
+				<field name="follow" type="list" default="yes" label="Include ref='nofollow'" description="Search engines that support ref='follow' attribute exclude these links for their ranking calculation.">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+	            <field name="disableinfrontend" type="textarea" cols="40" rows="2" default="" filter="raw" label="Disable in pages" description="Disable the plugin in the page listed (newline separated paths)" />		            
+				
+			</fieldset>
+			
+			<fieldset name="Background" label="Background icons">
+
+				<field name="background" type="radio" default="yes" label="Background" description="Display or not a background under each icons">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="color_background" type="text" default="#ffffff" label="Color of background" description="Set the hexadecimal code of the background color . Default : #ffffff " />
+				
+			</fieldset>	
+
+			<fieldset name="Opacity" label="Opacity and hover effect">
+
+				<field name="opacity_normal" type="list" default="05" label="Opacity by default" description="Level of opacity for each icons">
+					<option value="10">1</option>
+					<option value="09">0.9</option>
+					<option value="08">0.8</option>
+					<option value="07">0.7</option>
+					<option value="06">0.6</option>
+					<option value="05">0.5</option>
+					<option value="04">0.4</option>
+					<option value="03">0.3</option>
+					<option value="02">0.2</option>
+					<option value="01">0.1</option>
+				</field>
+
+				<field name="opacity_hover" type="list" default="09" label="Opacity on mouse hover" description="Level of opacity when mouse hover">
+					<option value="10">1</option>
+					<option value="09">0.9</option>
+					<option value="08">0.8</option>
+					<option value="07">0.7</option>
+					<option value="06">0.6</option>
+					<option value="05">0.5</option>
+					<option value="04">0.4</option>
+					<option value="03">0.3</option>
+					<option value="02">0.2</option>
+					<option value="01">0.1</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="Tooltips" label="Tootips">
+
+				<field name="tooltips_color" type="radio" default="white" label="Tooltips background" description="">
+					<option value="white">White</option>
+					<option value="black">Black</option>
+				</field>
+			
+			</fieldset>	
+			
+			<fieldset name="Google+1" label="Google+1 button">
+
+				<field name="google+1" type="radio" default="no" label="Enable Google+1 button" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+			</fieldset>	
+			
+			
+			<fieldset name="icons" label="Social icons">
+			
+				<field name="icon_01" type="radio" default="no" label="Enable icon 01" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_01_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_01_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_01_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_01_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+		
+				<field name="spacer1" type="spacer" />
+		
+		
+		
+				<field name="icon_02" type="radio" default="no" label="Enable icon 02" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_02_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_02_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_02_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_02_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+					
+				<field name="spacer2" type="spacer" />
+				
+				
+
+				<field name="icon_03" type="radio" default="no" label="Enable icon 03" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_03_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_03_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_03_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_03_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+
+
+				<field name="spacer3" type="spacer" />
+				
+				
+
+				<field name="icon_04" type="radio" default="no" label="Enable icon 04" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_04_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_04_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_04_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_04_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer4" type="spacer" />
+				
+				
+
+				<field name="icon_05" type="radio" default="no" label="Enable icon 05" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_05_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_05_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_05_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_05_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer5" type="spacer" />
+				
+				
+
+				<field name="icon_06" type="radio" default="no" label="Enable icon 06" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_06_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_06_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_06_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_06_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer6" type="spacer" />
+				
+				
+
+				<field name="icon_07" type="radio" default="no" label="Enable icon 07" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_07_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_07_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_07_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_07_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer7" type="spacer" />
+				
+				
+
+				<field name="icon_08" type="radio" default="no" label="Enable icon 08" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_08_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_08_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_08_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_08_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer8" type="spacer" />
+				
+				
+
+				<field name="icon_09" type="radio" default="no" label="Enable icon 09" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_09_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_09_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_09_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_09_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer9" type="spacer" />
+				
+				
+
+				<field name="icon_10" type="radio" default="no" label="Enable icon 10" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_10_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_10_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_10_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_10_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer10" type="spacer" />
+				
+				
+
+				<field name="icon_11" type="radio" default="no" label="Enable icon 11" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_11_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_11_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_11_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_11_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer11" type="spacer" />
+				
+				
+
+				<field name="icon_12" type="radio" default="no" label="Enable icon 12" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_12_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_12_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_12_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_12_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer12" type="spacer" />
+				
+				
+
+				<field name="icon_13" type="radio" default="no" label="Enable icon 13" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_13_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_13_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_13_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_13_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer13" type="spacer" />
+				
+				
+
+				<field name="icon_14" type="radio" default="no" label="Enable icon 14" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_14_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_14_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_14_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_14_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer14" type="spacer" />
+				
+				
+
+				<field name="icon_15" type="radio" default="no" label="Enable icon 15" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_15_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_15_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_15_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_15_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer15" type="spacer" />
+				
+				
+
+				<field name="icon_16" type="radio" default="no" label="Enable icon 16" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_16_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_16_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_16_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_16_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer16" type="spacer" />
+				
+
+
+				<field name="icon_17" type="radio" default="no" label="Enable icon 17" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_17_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_17_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_17_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_17_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />
+				
+				<field name="spacer17" type="spacer" />
+				
+				
+				
+				<field name="icon_18" type="radio" default="no" label="Enable icon 18" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				
+				<field name="icon_18_theme" type="folderlist" default="black" label="Select a theme" description="" directory="plugins/system/social_presence/icons" />
+				
+				<field name="icon_18_image" type="filelist" default="" label="Select an Image" description="" directory="plugins/system/social_presence/icons/black" filter="\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$" exclude="" stripext="" />
+				
+				<field name="icon_18_link" type="text" default="" label="URL" description="Complete url : you must include http://" size="20" />
+
+				<field name="icon_18_text" type="text" default="" label="Text" description="Display a text when the mouse hover this icon" size="20" />			
+
+
+			</fieldset>
+				
+		</fields>
+		
+	</config>
+	
+</extension>

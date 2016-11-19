@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="2.5" method="upgrade">
+	<name>Český jazykový balíček pro TinyMCE</name>
+	<author>Joomla! Czech Translation Team</author>
+	<creationDate>2012-02-03</creationDate>
+	<copyright>(C) 2005-2012 Joomla! Czech Translation Team</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.cz</authorEmail>
+	<authorUrl>http://www.joomlaportal.cz</authorUrl>
+	<version>3.4.3.2</version>
+	<description><![CDATA[
+		<h3>Instalace českého jazykového balíčku pro TinyMCE byla úspěšně dokončena</h3>
+		<div style="font-weight:normal">Nezapomeňte nastavit jazyk v <a href="index.php?option=com_plugins&view=plugins&filter_search=TinyMCE"><strong>v nastavení pluginu TinyMCE</strong></a> na 			"cs"<br />
+		Pokud používáte automatickou detekci, zkontrolujte, zda jsou nainstalovány i jazykové balíčky pro TinyMCE, které odpovídají nainstalovaným jazykům v Joomle!<br/><br/></div>
+		]]>
+	</description>
+
+	<!-- Fileset definition -->
+	<fileset>
+		<files target="media/editors">
+					<filename>tinymce/jscripts/tiny_mce/langs/cs.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/advhr/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/advimage/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/advlink/langs/cs_dlg.js</filename>
+					<!--<filename>tinymce/jscripts/tiny_mce/plugins/autosave/langs/cs.js</filename>-->
+					<filename>tinymce/jscripts/tiny_mce/plugins/emotions/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/fullpage/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/media/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/paste/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/searchreplace/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/style/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/table/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/template/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/themes/advanced/langs/cs.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/themes/advanced/langs/cs_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/themes/simple/langs/cs.js</filename>
+		</files>
+	</fileset>
+</extension>

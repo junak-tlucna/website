@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6">
+	<name>Gold Picasa Gallery Package</name>
+	<packagename>goldpicasa</packagename>
+	<version>3.2</version>
+	<creationDate>August 2013</creationDate>
+	<url>http://goldpicasagallery.konopelski.info</url>
+	<authorUrl>www.konopelski.info</authorUrl>
+	<packager>Tomek Konopelski</packager>
+	<packagerurl>goldpicasagallery.konopelski.info</packagerurl>
+	<description>Gold Picasa Gallery package installer - component, module and plugins</description>
+	<files folder="packages">
+		<file type="component" 	id="com_goldpicasa" >com_goldpicasa.zip</file>
+		<file type="plugin"	id="goldpicasa" group="content">plg_content_goldpicasa.zip</file>
+		<file type="plugin"	id="k2_goldpicasa" group="k2">plg_k2_goldpicasa.zip</file>
+		<file type="module"	id="mod_goldpicasa">mod_goldpicasa.zip</file>
+	</files>
+</extension>

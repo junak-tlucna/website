@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>com_goldpicasa</name>
+	<creationDate>August 2013</creationDate>
+	<copyright>Copyright (C) 2012. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE</license>
+    	<author>Tom Konopelski</author>
+	<authorEmail>tom@konopelski.info</authorEmail>
+	<authorUrl>www.konopelski.info</authorUrl>
+	<version>3.3.4</version>
+	<description>Gold Picasa Photo Gallery</description>
+	<scriptfile>script.php</scriptfile>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>goldpicasa.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>views</folder>
+		<folder>helpers</folder>
+		<folder>assets</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_goldpicasa.ini</language>
+		<language tag="fr-FR">language/fr-FR.com_goldpicasa.ini</language>
+		<language tag="nl-NL">language/nl-NL.com_goldpicasa.ini</language>
+		<language tag="pl-PL">language/pl-PL.com_goldpicasa.ini</language>
+	</languages>
+	<administration>
+		<menu img="components/com_goldpicasa/assets/img/picasa.png">COM_GOLDPICASA</menu>
+		<submenu>
+			<menu link="option=com_goldpicasa&amp;view=items" view="items" img="class:items" alt="COM_GOLDPICASA_ALBUMS">COM_GOLDPICASA_ALBUMS</menu>
+			<menu link="option=com_goldpicasa&amp;task=users" view="items" img="class:items" alt="COM_GOLDPICASA_USERS">COM_GOLDPICASA_USERS</menu>
+			<menu link="option=com_goldpicasa&amp;task=settings" view="items" img="class:items" alt="JACTION_COMPONENT_SETTINGS">JACTION_COMPONENT_SETTINGS</menu>
+        </submenu>
+		<files folder="administrator">
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>goldpicasa.php</filename>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>assets</folder>
+		</files>
+		<languages folder="administrator">
+			<language tag="en-GB">language/en-GB.com_goldpicasa.ini</language>
+			<language tag="en-GB">language/en-GB.com_goldpicasa.sys.ini</language>
+
+			<language tag="fr-FR">language/fr-FR.com_goldpicasa.ini</language>
+			<language tag="fr-FR">language/fr-FR.com_goldpicasa.sys.ini</language>
+
+			<language tag="pl-PL">language/pl-PL.com_goldpicasa.ini</language>
+			<language tag="pl-PL">language/pl-PL.com_goldpicasa.sys.ini</language>
+
+			<language tag="nl-NL">language/nl-NL.com_goldpicasa.ini</language>
+                        <language tag="nl-NL">language/nl-NL.com_goldpicasa.sys.ini</language>
+
+			<language tag="ru-RU">language/ru-RU.com_goldpicasa.ini</language>
+                        <language tag="ru-RU">language/ru-RU.com_goldpicasa.sys.ini</language>
+		</languages>
+	</administration>
+<goldDomain>junak-tlucna.cz</goldDomain><goldOrder>312</goldOrder></extension>

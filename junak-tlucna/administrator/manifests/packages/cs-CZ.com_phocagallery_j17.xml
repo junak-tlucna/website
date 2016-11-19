@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.7" type="package">
+
+  <name>Phoca Gallery (čeština)</name>
+  <packagename>cs-CZ</packagename>
+  <creationDate>2012-02-01</creationDate>
+  <author>Václav Hromádko, upravil a dokončil Luděk Kolisko, doplnil Bong</author>
+  <authorEmail></authorEmail>
+  <authorUrl></authorUrl>
+  <copyright>Copyright (c)2011-2012</copyright>
+  <description>Čeština pro komponentu Phoca Gallery - administrátorské a uživatelské rozhraní.</description>
+  <version>3.1.2</version>
+
+  <files>
+         <file type="language" client="site" id="cs-CZ">site</file>
+         <file type="language" client="administrator" id="cs-CZ">admin</file>
+  </files>
+
+</extension>

@@ -1,0 +1,20 @@
+/*****************************************
+		SITE  IE8-
+******************************************/
+
+div.mod-languages ul.lang-inline li {
+display:inline-block;
+}
+
+/** 	Resize images 		**/
+
+img, embed, object, video, .scale {
+/* IE7-8 need help adjusting responsive images */
+width: auto;
+}
+
+/** 	MENUS 		**/
+
+.drop-down li ul ul {
+border:3px solid #eee;
+}

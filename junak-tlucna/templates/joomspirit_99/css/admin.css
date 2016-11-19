@@ -1,0 +1,338 @@
+/***********************************************************************************************
+**
+**									CSS style for Template manager
+**									
+**
+************************************************************************************************/
+
+
+/**		for Joomla 2.5 		**/
+
+#templatestyleOptions label, fieldset.panelform label, fieldset.panelform div.paramrow label, fieldset.panelform span.faux-label {
+padding: 5px 5px 0 0;
+width:200px;
+}
+
+/**		Joomal 2.5 and 3.X 		**/
+
+
+.tab-content .row-fluid .span0, .tab-content .row-fluid .span3, .tab-content .row-fluid .span6, .tab-content .row-fluid .span9, .tab-content .row-fluid .span12 {
+width:95%;
+}
+
+.tab-content .form-vertical {
+background: #f0f0f0;
+border:2px solid #ddd;
+margin-top:40px;
+padding:20px;
+}
+
+.info-labels + div {
+background: none repeat scroll 0 0 #EEEEEE;
+color: #000000;
+font-size: 110%;
+font-style: italic;
+font-weight: normal;
+margin: 15px 0 30px;
+padding: 15px 10px 10px 20px;
+}
+
+
+.control-group label {
+width:250px;
+}
+
+span.spacer {
+display:block;
+clear:both;
+margin-bottom:20px;
+padding-top:20px;
+border-bottom : 2px dotted #aaa;
+width:900px;
+}
+
+span.spacer label {
+display:none;
+}
+
+@media screen and (max-width: 979px) {
+
+	span.spacer {
+	width:auto;
+	}
+
+}
+
+
+.row-fluid [class*="span"]:first-child {
+margin-left: 15px;
+}
+.row-fluid [class*="span"]:first-child {
+margin-left: 15px;
+}
+.row-fluid [class*="span"] {
+margin-left: 15px;
+}
+
+
+
+
+
+
+.panel, .accordion-group {
+background: #ddd;
+background-image: -moz-linear-gradient(100% 100% 90deg, rgba(225,225,225,1), rgba(255,255,255,1));
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,1)), to(rgba(225,225,225,1)));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e1e1e1');
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;
+border-radius: 2px 2px 2px 2px;
+-moz-box-shadow: 1px 1px 2px #ddd;
+-webkit-box-shadow: 1px 1px 2px #ddd;
+border-box-shadow: 1px 1px 2px #ddd;
+border: 1px solid #ccc;
+padding: 6px 10px;		
+color: #444;		
+text-decoration: none;
+}
+
+.pane-sliders .title {
+padding: 4px;
+}
+
+.pane-sliders .panel h3 {
+border-bottom:none;
+}
+
+.pane-sliders .panel h3.pane-toggler-down {
+padding-bottom:10px;
+margin-bottom:10px;
+border-bottom: 2px dotted #d9d9d9 ;
+}
+
+.accordion-inner {
+border-top: 2px dotted #d9d9d9 ;
+padding-top:24px;
+}
+
+.panelform a {
+color:#828627;
+}
+
+table.admintable td.paramlist_key {
+font-weight:normal;text-transform:uppercase;
+text-align:left;
+}
+
+table.admintable td.paramlist_value label {
+text-transform:none;
+}
+
+table.admintable td.key, table.admintable td.paramlist_key,.pane-sliders .content,.pane-sliders .panel h3, div.panel fieldset {
+background:none;
+}
+
+div.panel fieldset {
+margin-bottom:0;
+padding-bottom:0;
+}
+
+table.admintable td.key, table.admintable td.paramlist_key {
+border:none;
+}
+
+form label, form span.faux-label {
+color:#394a12;
+}
+
+.panelform input, .panelform select {
+padding:5px;
+border-radius:3px;
+}
+
+.panelform input[type="radio"] {
+margin: 10px 5px 0 0;
+}
+
+#jform_params_target {
+width: 110px;
+}
+
+.pane-toggler-down span {
+padding: 7px 0px 7px 40px;
+padding-left:30px!important;
+font-size: 15px;
+font-weight:normal;
+color:#ec6104;
+}
+
+.pane-toggler span {
+padding: 7px 0px 7px 40px;
+padding-left:30px!important;
+font-size: 15px;
+font-weight:normal;
+color:#394a12;
+}
+
+.pane-toggler span:hover {
+color:#146295;
+}
+
+.button2-left {
+margin : 5px 5px 0 5px ;
+}
+
+.panelform a {
+color: #555;
+}
+
+.panelform a:hover {
+color: #ec6104;
+}
+
+.adminformlist .fltlft span {
+display: inline-block;
+margin: 9px 0 0 9px;
+}
+
+/** 		Hide the outline 	**/
+
+*:hover, *:active, *:focus, input:focus, textarea:focus {
+outline:none !important;
+}
+
+
+
+
+/**			General Fonts 			**/
+
+#jform_params_font_website_title, #jform_params_font_website_title option,
+#jform_params_font_slogan, #jform_params_font_slogan option,
+#jform_params_font_title_slogan, #jform_params_font_title_slogan option,
+#jform_params_font_subtitle, #jform_params_font_subtitle option,
+#jform_params_font_title_right_image, #jform_params_font_title_right_image option,
+#jform_params_font_menu, #jform_params_font_menu option,
+#jform_params_font_h1, #jform_params_font_h1 option,
+#jform_params_font_h2, #jform_params_font_h2 option,
+#jform_params_font_content, #jform_params_font_content option {
+font-size:18px;
+height:40px;
+line-height:40px;
+padding:7px;
+}
+
+
+/**			Safe Fonts 				**/
+
+option[value="Arial"] {
+font-family : Arial, sans-serif;
+}
+option[value="Georgia"] {
+font-family : Georgia, sans-serif;
+}
+option[value="Verdana"] {
+font-family : Verdana, sans-serif;
+}
+option[value="Times New Roman"] {
+font-family : Times new roman, sans-serif;
+}
+option[value="Trebuchet ms"] {
+font-family : Trebuchet ms, sans-serif;
+}
+option[value="Helvetica"] {
+font-family : Helvetica, sans-serif;
+}
+
+
+/**			Google Fonts 				**/
+
+option[value="Abel"] {
+font-family : Abel, sans-serif;
+}
+option[value="Arizonia"] {
+font-family : Arizonia, cursive;
+}
+option[value="Berkshire+Swash"] {
+font-family : 'Berkshire Swash', cursive;
+}
+option[value="Comfortaa"] {
+font-family : Comfortaa, sans-serif;
+}
+option[value="Cookie"] {
+font-family : Cookie, cursive;
+}
+option[value="Dosis"] {
+font-family : Dosis, sans-serif;
+}
+option[value="Droid+Sans"] {
+font-family : 'Droid Sans', sans-serif;
+}
+option[value="Comfortaa"] {
+font-family : Comfortaa, sans-serif;
+}
+option[value="Francois+One"] {
+font-family : 'Francois One', sans-serif;
+}
+option[value="Italianno"] {
+font-family : Italianno, cursive;
+}
+option[value="Lato"] {
+font-family : Lato, sans-serif;
+}
+option[value="Lobster"] {
+font-family : Lobster, sans-serif;
+}
+option[value="Lora"] {
+font-family : Lora, sans-serif;
+}
+option[value="Montserrat:700"] {
+font-family : Montserrat, sans-serif;
+}
+option[value="Oleo+Script"] {
+font-family : 'Oleo Script', sans-serif;
+}
+option[value="Open+Sans+Condensed"] {
+font-family : 'Open Sans Condensed', sans-serif;
+}
+option[value="Open+Sans"] {
+font-family : 'Open Sans', sans-serif;
+}
+option[value="Oswald"] {
+font-family : Oswald, sans-serif;
+}
+option[value="Oxygen"] {
+font-family : Oxygen, sans-serif;
+}
+option[value="PT+Sans+Narrow"] {
+font-family : 'PT Sans Narrow', sans-serif;
+}
+option[value="PT+Sans"] {
+font-family : 'PT Sans', sans-serif;
+}
+option[value="Prosto+One"] {
+font-family : 'Prosto One', cursive;
+}
+option[value="Quicksand"] {
+font-family : 'Quicksand', sans-serif;
+}
+option[value="Roboto+Condensed"] {
+font-family : 'Roboto Condensed', sans-serif;
+}
+option[value="Roboto"] {
+font-family : Roboto, sans-serif;
+}
+option[value="Rokkitt:400,700"] {
+font-family : Rokkitt, sans-serif;
+}
+option[value="Share"] {
+font-family : Share, cursive;
+}
+option[value="Source+Sans+Pro"] {
+font-family : 'Source Sans Pro', sans-serif;
+}
+option[value="Ubuntu+Condensed"] {
+font-family : 'Ubuntu Condensed', sans-serif;
+}
+option[value="Ubuntu"] {
+font-family : Ubuntu, sans-serif;
+}

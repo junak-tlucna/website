@@ -1,0 +1,66 @@
+/*****************************************
+		SITE  IE7-
+******************************************/
+
+div.mod-languages img {
+margin-top:1px;
+}
+
+.bottom_menu li {
+margin:0px 0 0 5px ;
+background-image:none;
+}
+
+.drop-down li {
+vertical-align:top;
+}
+.drop-down li li:hover > ul, .drop-down li li:focus > ul {
+z-index:20;
+}
+.drop-down li li li:hover > ul, .drop-down li li li:focus > ul {
+z-index:30;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .inputbox {
+height: auto;
+line-height: 1.42857;
+padding: 6px 12px;
+width: auto;
+}
+
+
+ul.actions li, .link ul li a, #form-login ul li a, #com-form-login ul li a, ul.mostread li a, ul.latestnews li a, .weblinks ul li a, ul.newsfeed li a,
+#___plusone_0, .pollstableborder tr .sectiontableentry1, .pollstableborder tr .sectiontableentry2,
+.categories-list dd, .categories-list dt, ul.pagenav li, div.mod-languages ul.lang-inline li,
+span.content_vote input, span.content_rating img , .pagination li, .top_menu li, .bottom_menu li, .horizontal_menu li, .drop-down li,
+.bottom_menu li a, #bottom_menu li span.separator, .horizontal_menu li a, .horizontal_menu li span.separator, .top_menu li a, #top_menu li span.separator {
+display:inline;
+zoom:1;
+}
+
+/**			to fixed a bug with Font Awesome code 		**/
+
+.social-links {
+display:none;
+}
+
+/*************	COLUMN LAYOUTS				****************************/
+
+.one-half, .one-third, .two-third, .one-fourth, .two-fourth, .three-fourth, .one-fifth, .two-fifth, .three-fifth, .four-fifth {
+margin-right:3.5%;
+}
+
+/**		Others 		**/
+
+.drop-down {
+background-color: #fff;
+}
+
+.drop-down li, .drop-down li a {
+width: 100%;
+}
+
+
+#search .search label {
+display:none;
+}

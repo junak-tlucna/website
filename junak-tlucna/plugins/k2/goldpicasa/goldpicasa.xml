@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="k2" method="upgrade">
+	<name>Gold Picasa for K2 (by Tom Konopelski)</name>
+	<author>Tom Konopelski</author>
+	<authorEmail>goldpicasagallery@konopelski.info</authorEmail>
+	<authorUrl>www.goldpicasagallery.konopelski.info</authorUrl>
+	<copyright>Copyright (c) 2006-2013 Tom Konopelski Ltd. All rights reserved.</copyright>
+	<creationDate>October, 2013</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>2.1</version>
+	<description>Gold Picasa for K2</description>
+	
+	<files>
+		<filename plugin="goldpicasa">goldpicasa.php</filename>
+	</files>
+	
+	<fields group="item-gallery" addfieldpath="/administrator/components/com_k2fields/elements/">
+          	
+          	<fieldset name="goldpicasa"
+				addfieldpath="/administrator/components/com_goldpicasa/models/fields"
+				label="Gold Picasa Gallery" >
+				
+				<field name="goldGalleryAlbumId" type="modal_gold"
+					label="COM_GOLDPICASA_SELECT_ALBUM" />
+					
+			 </fieldset>		
+			
+	          <field name="goldGalleryShowAlbumName" type="list" default="1" label="COM_GOLDPICASA_SHOW_ALBUM_NAME" description="COM_GOLDPICASA_SHOW_ALBUM_NAME_DSCR">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+			  </field>
+
+				<field name="goldGalleryCustomAlbumName" type="text" default=""
+					label="COM_GOLDPICASA_CUSTOM_ALBUM_NAME" description="COM_GOLDPICASA_IGNORED_IF_EMPTY" size="30" filter="raw" />
+					
+
+				<field name="goldShowSummary" type="list" default="1" label="COM_GOLDPICASA_SHOW_DESCRIPTION" description="COM_GOLDPICASA_SHOW_DESCRIPTION_DSCR">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field>
+
+
+				<field name="goldGalleryThumbnailSize" type="list" default="150"
+					label="COM_GOLDPICASA_THUMBNAIL_SIZE" description="COM_GOLDPICASA_THUMBNAIL_SIZE_DSCR">
+					<option value="32">32</option>
+					<option value="48">48</option>
+					<option value="64">64</option>
+					<option value="72">72</option>
+					<option value="104">104</option>
+					<option value="144">144</option>
+					<option value="150">150</option>
+					<option value="160">160</option>
+			    <option value="200">200</option>
+	                    <option value="220">220</option>
+        	            <option value="288">288</option>
+        	            <option value="320">320</option>
+        	            <option value="400">400</option>
+        	            <option value="512">512</option>
+
+				</field>
+
+
+				<field name="goldGalleryImgmax" type="list" default="1024"
+					label="COM_GOLDPICASA_MAX_IMAGE_RESOLUTION" description="COM_GOLDPICASA_MAX_IMAGE_RESOLUTION_DSCR" >
+					<option value="94">94</option>
+					<option value="110">110</option>
+					<option value="128">128</option>
+					<option value="200">200</option>
+					<option value="220">220</option>
+					<option value="288">288</option>
+					<option value="320">320</option>
+					<option value="400">400</option>
+					<option value="512">512</option>
+					<option value="576">576</option>
+					<option value="640">640</option>
+					<option value="720">720</option>
+					<option value="800">800</option>
+					<option value="912">912</option>
+					<option value="1024">1024</option>
+					<option value="1152">1152</option>
+					<option value="1280">1280</option>
+					<option value="1440">1440</option>
+					<option value="1600">1600</option>
+					<option value="d">COM_GOLDPICASA_MAX_IMAGE_RESOLUTION_D</option>
+				</field>
+				
+				<field name="goldGalleryMaxResults" size="5" type="text" default="20" label="COM_GOLDPICASA_MAX_RESULTS_PER_PAGE" description="COM_GOLDPICASA_MAX_RESULTS_PER_PAGE_DSCR" filter="integer" />
+
+				<field name="goldGalleryShowOnFeaturedList" type="list" default="0" label="COM_GOLDPICASA_SHOW_ON_FEATURED" description="">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field>
+				
+
+
+				<field name="goldGalleryTopOrBottom" type="list" default="bottom" label="COM_GOLDPICASA_ALBUM_POSITION" description="COM_GOLDPICASA_ALBUM_POSITION_DSCR">
+				  <option value="bottom">COM_GOLDPICASA_ALBUM_POSITION_AFTER</option>
+				  <option value="top">COM_GOLDPICASA_ALBUM_POSITION_BEFORE</option>
+				</field>
+
+
+			
+			<field name="goldGalleryCroped" type="list" default="c" label="COM_GOLDPICASA_THUMBNAIL_TYPE" description="COM_GOLDPICASA_THUMBNAIL_TYPE_DSCR">
+				  <option value="c">COM_GOLDPICASA_THUMBNAIL_TYPE_CROPED</option>
+				  <option value="u">COM_GOLDPICASA_THUMBNAIL_TYPE_UNCROPED</option>
+			</field>	
+
+			
+
+			<field name="goldGalleryMarginRight" type="integer" default="5"
+					label="COM_GOLDPICASA_THUMBNAIL_RIGHT_MARGIN" description="COM_GOLDPICASA_THUMBNAIL_RIGHT_MARGIN_DSCR" first="0" last="100" step="5" />
+					
+
+			<field name="goldGalleryMarginBottom" type="integer" default="5"
+					label="COM_GOLDPICASA_THUMBNAIL_BOTTOM_MARGIN" description="COM_GOLDPICASA_THUMBNAIL_RIGHT_MARGIN_DSCR" first="0" last="100" step="5" />
+					
+			
+			<field name="goldGalleryBorderType" type="list" default="50"
+					label="COM_GOLDPICASA_IMAGE_BORDER" description="">
+					<option value="0">COM_GOLDPICASA_NONE</option>
+					<option value="1">COM_GOLDPICASA_IMAGE_BORDER_STANDARD</option>
+					<option value="2">COM_GOLDPICASA_IMAGE_BORDER_PADDING2</option>
+					<option value="3">COM_GOLDPICASA_IMAGE_BORDER_PADDING4</option>
+					<option value="4">COM_GOLDPICASA_IMAGE_BORDER_PADDING8</option>
+					<option value="5">COM_GOLDPICASA_IMAGE_BORDER_PADDING10</option>
+					<option value="6">COM_GOLDPICASA_IMAGE_BORDER_PADDING12</option>
+			</field>
+			
+			<field name="goldGalleryBorderColor" type="list" 
+					label="COM_GOLDPICASA_IMAGE_BORDER_COLOR" description="">
+					<option value="#CCCCCC">gainsboro</option>
+					<option value="black">black</option>
+					<option value="silver">silver</option>
+					<option value="gray">gray</option>
+					<option value="white">white</option>
+					<option value="maroon">maroon</option>
+					<option value="red">red</option>
+					<option value="purple">purple</option>
+					<option value="fuchsia">fuchsia</option>
+					<option value="green">green</option>
+					<option value="lime">lime</option>
+					<option value="olive">olive</option>
+					<option value="yellow">yellow</option>
+					<option value="blue">blue</option>
+					<option value="teal">teal</option>
+					<option value="aqua">aqua</option>
+			</field>
+					
+					
+			<field name="goldGalleryBackgroundColor" type="list" default=""
+					label="COM_GOLDPICASA_IMAGE_BACKGROUND_COLOR" description="">
+					<option value="">COM_GOLDPICASA_NONE</option>
+					<option value="#CCCCCC">gainsboro</option>
+					<option value="black">black</option>
+					<option value="silver">silver</option>
+					<option value="gray">gray</option>
+					<option value="white">white</option>
+					<option value="maroon">maroon</option>
+					<option value="red">red</option>
+					<option value="purple">purple</option>
+					<option value="fuchsia">fuchsia</option>
+					<option value="green">green</option>
+					<option value="lime">lime</option>
+					<option value="olive">olive</option>
+					<option value="yellow">yellow</option>
+					<option value="blue">blue</option>
+					<option value="teal">teal</option>
+					<option value="aqua">aqua</option>
+			</field>
+
+			<field name="goldGalleryAttachCssFile" type="filelist" label="COM_GOLDPICASA_ATTACH_CUSOM_CSS" description="By adding a custom CSS you can override existing css definitions. &lt;br /&gt;Copy a new .css file to &lt;u&gt;/media/media/css/&lt;/u&gt; folder." directory="media/media/css" filter="\.css" exclude="" stripext="" />
+				
+
+			<field name="goldGalleryImageDisplayMethod" type="list" default="modal" label="COM_GOLDPICASA_IMAGE_DISPLAY_METHOD" description="">
+				  <option value="modal">COM_GOLDPICASA_IMAGE_DISPLAY_MODAL</option>
+				  <option value="nomodal">COM_GOLDPICASA_IMAGE_DISPLAY_NOMODAL</option>
+			</field>
+
+
+			<field name="goldGalleryCustomPager" type="list" default="1" label="COM_GOLDPICASA_CUSTOM_PAGER" description="">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+			</field>
+
+
+			<field type="spacer" name="myspacerslibox" label="COM_GOLDPICASA_SLIMBOX_SPACER" />
+			
+			
+			<field name="goldGallerySlimboxOverlayopacity" type="list" default="0.4" label="COM_GOLDPICASA_SLIMBOX_OVERLAYOPACITY" description="COM_GOLDPICASA_SLIMBOX_OVERLAYOPACITY_DSCR">
+				  <option value="1">1</option>
+				  <option value="0.8">0.8</option>
+				  <option value="0.6">0.6</option>
+				  <option value="0.4">0.4</option>
+				  <option value="0.2">0.2</option>
+				  <option value="0">0</option>
+			</field>
+			
+			<field name="goldGallerySlimboxOverlayFadeDuration" type="list" default="200" label="COM_GOLDPICASA_OVERLAYFADEDURATION" description="COM_GOLDPICASA_OVERLAYFADEDURATION_DSCR">
+				  <option value="0">0 (disabled)</option>
+				  <option value="200">200</option>
+				  <option value="400">400</option>
+				  <option value="600">600</option>
+				  <option value="800">800</option>
+				  <option value="1000">1000</option>
+			</field>
+			
+			<field name="goldGallerySlimboxResizeDuration" type="list" default="200" label="COM_GOLDPICASA_RESIZEDURATION" description="COM_GOLDPICASA_RESIZEDURATION_DSCR">
+				  <option value="0">0 (disabled)</option>
+				  <option value="200">200</option>
+				  <option value="400">400</option>
+				  <option value="600">600</option>
+				  <option value="800">800</option>
+				  <option value="1000">1000</option>
+			</field>
+			
+			<field name="goldGallerySlimboxImageFadeDuration" type="list" default="200" label="COM_GOLDPICASA_IMAGEFADEDURATION" description="COM_GOLDPICASA_IMAGEFADEDURATION_DSCR">
+				  <option value="0">0 (disabled)</option>
+				  <option value="200">200</option>
+				  <option value="400">400</option>
+				  <option value="600">600</option>
+				  <option value="800">800</option>
+				  <option value="1000">1000</option>
+			</field>
+			
+			<field name="goldGallerySlimboxCaptionAnimationDuration" type="list" default="200" label="COM_GOLDPICASA_CAPTIONANIMATIONDURATION" description="COM_GOLDPICASA_CAPTIONANIMATIONDURATION_DSCR">
+				  <option value="0">0 (disabled)</option>
+				  <option value="200">200</option>
+				  <option value="400">400</option>
+				  <option value="600">600</option>
+				  <option value="800">800</option>
+				  <option value="1000">1000</option>
+			</field>
+			
+			
+			<field name="goldGallerySlimboxImageTitle" type="list" default="3" label="COM_GOLDPICASA_SLIMBOX_SHOW_TITLE" description="COM_GOLDPICASA_SLIMBOX_SHOW_TITLE_DSCR">
+				  <option value="1">COM_GOLDPICASA_SLIMBOX_SHOW_TITLE_ALWAYS_SHOW</option>
+				  <option value="2">COM_GOLDPICASA_SLIMBOX_SHOW_TITLE_NEVER</option>
+				  <option value="3">COM_GOLDPICASA_SLIMBOX_SHOW_TITLE_HIDE_FILENAME</option>
+			</field>
+			
+			<field name="goldGallerySlimboxImageLink" type="list" default="hide" label="COM_GOLDPICASA_SLIMBOX_IMAGE_LINK" description="COM_GOLDPICASA_SLIMBOX_IMAGE_LINK_DSCR">
+				  <option value="current">COM_GOLDPICASA_SLIMBOX_IMAGE_LINK_CURRENT</option>
+				  <option value="orginal">COM_GOLDPICASA_SLIMBOX_IMAGE_LINK_ORGINAL</option>
+				  <option value="hide">JHIDE</option>
+			</field>
+			
+			<field name="goldGallerySlimboxAlbumname" type="list" default="hide" label="COM_GOLDPICASA_SLIMBOX_ALBUMNAME" description="COM_GOLDPICASA_SLIMBOX_ALBUMNAME_DSCR">
+				  <option value="hide">JHIDE</option>
+				  <option value="show">JSHOW</option>
+			</field>
+			<field name="goldGalleryAutoResize" type="list" default="1" label="COM_GOLDPICASA_AUTO_RESIZE" description="COM_GOLDPICASA_AUTO_RESIZE_DSCR">
+                                  <option value="1">JYES</option>
+                                  <option value="0">JNO</option>
+			</field>
+         
+     </fields>
+
+</extension>
